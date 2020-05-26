@@ -1,0 +1,19 @@
+#include<stdio.h>
+int sumofdigits(int);
+int main()
+{
+	int num,r;
+	r=1;
+	printf("ENTER A NUMBER WHOSE SUM OF DIGITS HAS TO FOUND OUT :");
+	scanf("%d",&num);
+	r= sumofdigits(num);
+    printf("The sum of digits is : %d",r);
+    
+}
+int sumofdigits(int n)
+{
+  if(n==0)
+  return 0;
+  else
+  return (n%10 + sumofdigits(n/10));	
+}
